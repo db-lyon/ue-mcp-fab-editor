@@ -1,0 +1,30 @@
+actionPrefix: fabeditor
+minServerVersion: 1.3.7
+nativeModule:
+  uePluginName: FabEditor
+  minBridgeApi: 1
+  supportedEngineVersions: ["5.8"]
+  source: ue/Plugins/FabEditor
+  category: fab_editor
+  categoryDescription: "Independent experimental Fab webview integration. Disabled until an operator explicitly enables it after checking Epic authorization. Browser metadata is not independently verified ownership."
+  handlers:
+    fab_editor_request:
+      timeoutSeconds: 30
+      description: "Operations: status, open, refresh_library, search_library, get_owned_asset, inspect, activate, set_search, select_option, download, get_imported_assets, operation_status, cancel_operation. Poll operationId for async results. Downloads require explicit confirmation and acknowledgement of browser-reported ownership; submission is not completion. No purchases or plugin/project installation."
+      schema:
+        operation: {type: string, description: "Operation name (required except status)."}
+        operationId: {type: string, description: "Asynchronous operation ID."}
+        assetId: {type: string, description: "Exact listing ID reported by the current browser library."}
+        query: {type: string, description: "Case-insensitive library search terms."}
+        batchSize: {type: number, description: "Compatibility hint; Fab controls page size."}
+        deliveryMode: {type: string, description: "Delivery-mode filter."}
+        limit: {type: number, description: "Search page size, 1 to 100."}
+        offset: {type: number, description: "Search result offset."}
+        browserId: {type: number, description: "Browser ID from status; required if ambiguous."}
+        snapshotId: {type: string, description: "Fresh native-held snapshot ID."}
+        elementId: {type: string, description: "Element ID from that snapshot."}
+        value: {type: string, description: "Search text or exact option value."}
+        confirmDownload: {type: boolean, description: "Explicit user authorization for the selected download."}
+        acknowledgeBrowserReportedOwnership: {type: boolean, description: "Required for download: acknowledges that webview data is not independent entitlement verification."}
+knowledge:
+  fab_editor: knowledge/fab_editor.md

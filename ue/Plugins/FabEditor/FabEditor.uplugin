@@ -1,0 +1,15 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "0.1.0-alpha.1",
+  "FriendlyName": "Fab Editor for UE-MCP",
+  "Description": "Independent, opt-in experimental Fab integration. Not endorsed by Epic; applicable Fab permissions and terms are required.",
+  "Category": "Editor",
+  "CreatedBy": "vaughn1990",
+  "CanContainContent": false,
+  "EnabledByDefault": false,
+  "IsBetaVersion": true,
+  "Installed": true,
+  "Modules": [{"Name": "FabEditor", "Type": "Editor", "LoadingPhase": "PostEngineInit"}],
+  "Plugins": [{"Name": "UE_MCP_Bridge", "Enabled": true}, {"Name": "Fab", "Enabled": true}]
+}
