@@ -3,6 +3,7 @@
   "version": "0.1.0-alpha.1",
   "description": "Opt-in experimental Fab editor integration for UE-MCP. Epic authorization and applicable terms remain the user's responsibility.",
   "type": "module",
+  "keywords": ["ue-mcp-plugin", "ue-mcp", "unreal-engine", "ue5", "fab", "editor"],
   "main": "index.js",
   "repository": {"type": "git", "url": "git+https://github.com/vaughn1990/ue-mcp-fab-editor.git"},
   "homepage": "https://github.com/vaughn1990/ue-mcp-fab-editor#readme",

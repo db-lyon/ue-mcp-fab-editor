@@ -9,7 +9,6 @@
   "CanContainContent": false,
   "EnabledByDefault": false,
   "IsBetaVersion": true,
-  "Installed": true,
   "Modules": [{"Name": "FabEditor", "Type": "Editor", "LoadingPhase": "PostEngineInit"}],
   "Plugins": [{"Name": "UE_MCP_Bridge", "Enabled": true}, {"Name": "Fab", "Enabled": true}]
 }

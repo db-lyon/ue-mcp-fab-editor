@@ -5,7 +5,7 @@ Recorded 2026-09-07. This is a source-only experimental prerelease, not a native
 ## Passed
 
 - UE-MCP 1.3.7 manifest/native-module contract check.
-- 34 offline Node tests: browser control policy, synthetic library responses, and package/native-source contracts.
+- 35 offline Node tests: browser control policy, synthetic library responses, and package/native-source contracts.
 - Package file-list review: no engine binaries, account inventories, credentials, game assets, or validation-project outputs.
 - Git whitespace check.
 

@@ -10,6 +10,12 @@ test('native module is a separate plugin with no task shim',()=>{
   assert.deepEqual(dropped,[]);assert.equal(manifest.nativeModule.uePluginName,'FabEditor');
   assert.equal(manifest.nativeModule.category,'fab_editor');assert.equal(manifest.minServerVersion,'1.3.7');
   assert.ok(manifest.nativeModule.handlers.fab_editor_request);assert.equal(Object.keys(manifest.tasks ?? {}).length,0);
+  assert.equal(manifest.uePluginDependency,'Fab');
+});
+test('uplugin is a project plugin, not a launcher install',()=>{
+  const descriptor=JSON.parse(fs.readFileSync(new URL('ue/Plugins/FabEditor/FabEditor.uplugin',root),'utf8'));
+  assert.equal(descriptor.Installed,undefined);
+  assert.ok(descriptor.Plugins.some(p=>p.Name==='Fab'&&p.Enabled!==false));
 });
 test('host mutation guard covers the actual external method',()=>{
   assert.equal(mutationScope({method:'fab_editor_request',params:{operation:'download'}}),true);

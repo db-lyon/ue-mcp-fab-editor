@@ -18,15 +18,13 @@ The npm package owns category `fab_editor`, dispatching native handler `fab_edit
 
 ## Installation
 
-Download the package tarball from [GitHub Releases](https://github.com/vaughn1990/ue-mcp-fab-editor/releases). From the intended Unreal project, use UE-MCP's normal plugin installer with that local tarball:
+From the intended Unreal project, use UE-MCP's normal plugin installer. The package is published under the `alpha` dist-tag, so the tag is required:
 
 ```text
-ue-mcp plugin install /absolute/path/to/ue-mcp-fab-editor-0.1.0-alpha.1.tgz
+ue-mcp plugin install ue-mcp-fab-editor@alpha
 ```
 
 Installing a native plugin changes that project's plugin files and requires rebuilding its Editor target. Close the matching editor and use the project's approved build entry point. Do not install into a project another task is modifying.
-
-The GitHub tarball does not require an npm account. Do not assume this version is available in the npm registry unless it is explicitly listed there.
 
 Online access is **disabled by default**, including authentication inspection. After independently establishing permission for your use, enable it in the project's `Config/DefaultEditorPerProjectUserSettings.ini`:
 

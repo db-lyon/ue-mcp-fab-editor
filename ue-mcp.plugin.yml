@@ -1,5 +1,6 @@
 actionPrefix: fabeditor
 minServerVersion: 1.3.7
+uePluginDependency: Fab
 nativeModule:
   uePluginName: FabEditor
   minBridgeApi: 1
